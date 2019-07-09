@@ -62,13 +62,3 @@ class Zabbix(object):
            raise ZabbixException('Error: {}'.format(json.loads(self.__client.text)['error']['data']))
        else:
            return json.loads(self.__client.text)['result']
-
-
-# if __name__  == "__main__":
-#     url = 'http://10.174.1.10'
-#     username = 'Admin'
-#     password = 'HUv9oQ82bmZRDWEI'
-#     obj = Zabbix(zabbix_url=url, zabbix_username=username, zabbix_password=password)
-#     print obj.get_auth_id()
-
-
